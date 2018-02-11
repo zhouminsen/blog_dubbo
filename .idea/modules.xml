@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/blog-controller/blog-controller.iml" filepath="$PROJECT_DIR$/blog-controller/blog-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-core/blog-core.iml" filepath="$PROJECT_DIR$/blog-core/blog-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-dao/blog-dao.iml" filepath="$PROJECT_DIR$/blog-dao/blog-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-dubbo.iml" filepath="$PROJECT_DIR$/blog-dubbo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-entity/blog-entity.iml" filepath="$PROJECT_DIR$/blog-entity/blog-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-job/blog-job.iml" filepath="$PROJECT_DIR$/blog-job/blog-job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-servic-impl/blog-servic-impl.iml" filepath="$PROJECT_DIR$/blog-servic-impl/blog-servic-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-service/blog-service.iml" filepath="$PROJECT_DIR$/blog-service/blog-service.iml" />
+    </modules>
+  </component>
+</project>

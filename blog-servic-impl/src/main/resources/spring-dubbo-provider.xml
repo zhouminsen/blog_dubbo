@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 添加 DUBBO SCHEMA -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 应用名 -->
+    <dubbo:application name="blog-provider"/>
+    <!-- 连接到哪个注册中心 -->
+    <!-- 开发环境 -->
+    <!--<dubbo:registry id="development-dubbo" address="zookeeper://${dubbo.registry.development}" register="true"-->
+    <!--timeout="1000000000"/>-->
+    <dubbo:registry id="development-dubbo" address="zookeeper://127.0.0.1:2181" register="true" timeout="1000000000"/>
+
+
+    <!-- 测试环境 -->
+    <!--<dubbo:registry id="test-dubbo" address="zookeeper://${dubbo.registry.test}" register="true" timeout="1000000000"/>-->
+    <!-- 正式环境 -->
+    <!--<dubbo:registry id="deployment-dubbo" address="zookeeper://${dubbo.registry.deployment}" register="true"/>-->
+
+
+    <!-- 用dubbo协议在指定端口暴露服务 -->
+    <!--
+    <dubbo:protocol name="dubbo" accepts="${dubbo.accepts}"
+        serialization="${dubbo.serialization}" port="${dubbo.port}" host="${dubbo.host}" />-->
+
+    <!--    <dubbo:protocol name="dubbo" port="${dubbo.port}" host="${dubbo.host}" />-->
+    <dubbo:protocol name="dubbo" serialization="kryo" port="3001"/>
+    <!--<dubbo:protocol name="rmi" serialization="${dubbo.serialization}"-->
+    <!--port="${dubbo.port}" host="${dubbo.host}" />-->
+    <!--<dubbo:protocol name="http" serialization="${dubbo.serialization}"-->
+    <!--port="${dubbo.port}" host="${dubbo.host}" />-->
+    <!--<dubbo:protocol name="hessian" serialization="${dubbo.serialization}"-->
+    <!--port="${dubbo.port}" host="${dubbo.host}" />-->
+    <!--<dubbo:protocol name="webservice" serialization="${dubbo.serialization}"-->
+    <!--port="${dubbo.port}" host="${dubbo.host}" />-->
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service
+            interface="org.zjw.blog.service.BackupService"
+            ref="backupService"/>
+    <dubbo:service
+            interface="org.zjw.blog.service.BlogCommentService"
+            ref="blogCommentService"/>
+    <dubbo:service
+            interface="org.zjw.blog.service.BloggerService"
+            ref="bloggerService"/>
+    <dubbo:service
+            interface="org.zjw.blog.service.BlogService"
+            ref="blogService"/>
+    <dubbo:service
+            interface="org.zjw.blog.service.BlogTypeService"
+            ref="blogTypeService"/>
+    <dubbo:service
+            interface="org.zjw.blog.service.LinkService"
+            ref="linkService"/>
+    <dubbo:service
+            interface="org.zjw.blog.service.LogErrorService"
+            ref="logErrorService"/>
+    <dubbo:service
+            interface="org.zjw.blog.service.LogLoginService"
+            ref="logLoginService"/>
+    <dubbo:service
+            interface="org.zjw.blog.service.LogOperationService"
+            ref="logOperationService"/>
+    <dubbo:service
+            interface="org.zjw.blog.service.MenuService"
+            ref="menuService"/>
+    <dubbo:service
+            interface="org.zjw.blog.service.OperationService"
+            ref="operationService"/>
+    <dubbo:service
+            interface="org.zjw.blog.service.RoleService"
+            ref="roleService"/>
+
+    <dubbo:service
+            interface="org.zjw.blog.service.DownloadService"
+            ref="downloadService"/>
+</beans>
