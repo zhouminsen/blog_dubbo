@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LogOperationTest {
-	ApplicationContext app=new ClassPathXmlApplicationContext("applicationContext.xml");
+	ApplicationContext app=new ClassPathXmlApplicationContext("applicationContextTest.xml");
 	LogOperationService logOperationService=(LogOperationService) app.getBean("logOperationService");
 	
 	/**

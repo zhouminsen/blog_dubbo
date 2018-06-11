@@ -14,7 +14,7 @@ import java.util.Map;
  *
  */
 public class LogTest {
-	ApplicationContext app=new ClassPathXmlApplicationContext("applicationContext.xml");
+	ApplicationContext app=new ClassPathXmlApplicationContext("applicationContextTest.xml");
 	LogLoginService logLoginService=(LogLoginService) app.getBean("logLoginService");
 	/**
 	 * 添加登录日志

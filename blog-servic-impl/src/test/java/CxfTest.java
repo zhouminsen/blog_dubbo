@@ -9,7 +9,7 @@ public class CxfTest extends BaseTest {
 	@Test
 	public void test() {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext(
-                "classpath:applicationContext.xml");
+                "classpath:applicationContextTest.xml");
 		 
 	}
 }

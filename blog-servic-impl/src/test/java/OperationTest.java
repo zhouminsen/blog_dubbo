@@ -11,7 +11,7 @@ import org.zjw.blog.service.OperationService;
  * @date 2016-7-29
  */
 public class OperationTest {
-	ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
+	ApplicationContext app = new ClassPathXmlApplicationContext("applicationContextTest.xml");
 	OperationService operationService=(OperationService) app.getBean("operationService");
 	/**
 	 * 根据id获得权限

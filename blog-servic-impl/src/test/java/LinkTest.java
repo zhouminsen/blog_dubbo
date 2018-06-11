@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LinkTest {
-	ApplicationContext app=new ClassPathXmlApplicationContext("applicationContext.xml");
+	ApplicationContext app=new ClassPathXmlApplicationContext("applicationContextTest.xml");
 	LinkService linkService=(LinkService) app.getBean("linkService");
 	
 	/**

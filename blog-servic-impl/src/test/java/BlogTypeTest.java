@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BlogTypeTest {
-	ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
+	ApplicationContext app = new ClassPathXmlApplicationContext("applicationContextTest.xml");
 	BlogTypeService blogTypeService=(BlogTypeService) app.getBean("blogTypeService");
 	
 	/**

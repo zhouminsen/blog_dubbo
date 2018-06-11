@@ -9,11 +9,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BlogCommentTest {
-	ApplicationContext app=new ClassPathXmlApplicationContext("applicationContext.xml");
+	ApplicationContext app=new ClassPathXmlApplicationContext("applicationContextTest.xml");
 	BlogCommentService blogCommentService=(BlogCommentService) app.getBean("blogCommentService");
 	
 	@Test
 	public void getVoByCondition() {
+		((ClassPathXmlApplicationContext)app).registerShutdownHook();
 		Map<String, Object> queryMap=new HashMap<String, Object>();
 		queryMap.put("userId", 1);
 		Page<BlogCommentVo> page=blogCommentService.getPageVoByCondition(queryMap);
