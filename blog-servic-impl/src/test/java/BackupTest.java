@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BackupTest {
-	ApplicationContext app=new ClassPathXmlApplicationContext("applicationContext.xml");
+	ApplicationContext app=new ClassPathXmlApplicationContext("applicationContextTest.xml");
 	BackupService backupService=(BackupService) app.getBean("backupService");
 	/**
 	 * 多条件查询分页对象
