@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class Test1 {
 	ApplicationContext app = new ClassPathXmlApplicationContext(
-            "applicationContext.xml");
+            "applicationContextTest.xml");
 	BlogService blogService = (BlogService) app.getBean("blogService");
 
 	@Test

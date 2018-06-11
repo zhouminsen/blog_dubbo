@@ -13,7 +13,7 @@
     <!-- 开发环境 -->
     <!--<dubbo:registry id="development-dubbo" client="curator" address="zookeeper://${dubbo.registry.development}" register="true"/>-->
 
-    <dubbo:registry id="development-dubbo" address="zookeeper://127.0.0.1:2181" register="true"/>
+    <dubbo:registry id="development-dubbo" address="zookeeper://127.0.0.1:2181" register="true" />
 
     <!-- 测试环境 -->
     <!--<dubbo:registry id="test-dubbo" client="curator" address="zookeeper://${dubbo.registry.test}" register="true"/>-->
@@ -22,48 +22,48 @@
     <!--<dubbo:registry id="deployment-dubbo" client="curator" address="zookeeper://${dubbo.registry.deployment}" register="true"/>-->
 
     <!-- 用dubbo协议在指定端口暴露服务 -->
-    <dubbo:protocol name="dubbo" serialization="kryo" port="3002"/>
+    <dubbo:protocol name="dubbo" serialization="kryo" port="3002" />
 
     <!-- 声明需要获取的服务接口 -->
 
     <dubbo:reference
             interface="org.zjw.blog.service.BackupService"
-            id="backupService"/>
+            id="backupService"  version="1.0"/>
     <dubbo:reference
             interface="org.zjw.blog.service.BlogCommentService"
-            id="blogCommentService"/>
+            id="blogCommentService"  version="1.0"/>
     <dubbo:reference
             interface="org.zjw.blog.service.BloggerService"
-            id="bloggerService"/>
+            id="bloggerService" version="1.0"/>
     <dubbo:reference
             interface="org.zjw.blog.service.BlogService"
-            id="blogService"/>
+            id="blogService" version="1.0"/>
     <dubbo:reference
             interface="org.zjw.blog.service.BlogTypeService"
-            id="blogTypeService"/>
+            id="blogTypeService" version="1.0"/>
     <dubbo:reference
             interface="org.zjw.blog.service.LinkService"
-            id="linkService"/>
+            id="linkService" version="1.0"/>
     <dubbo:reference
             interface="org.zjw.blog.service.LogErrorService"
-            id="logErrorService"/>
+            id="logErrorService" version="1.0"/>
     <dubbo:reference
             interface="org.zjw.blog.service.LogLoginService"
-            id="logLoginService"/>
+            id="logLoginService" version="1.0"/>
     <dubbo:reference
             interface="org.zjw.blog.service.LogOperationService"
-            id="logOperationService"/>
+            id="logOperationService" version="1.0"/>
     <dubbo:reference
             interface="org.zjw.blog.service.MenuService"
-            id="menuService"/>
+            id="menuService" version="1.0"/>
     <dubbo:reference
             interface="org.zjw.blog.service.OperationService"
-            id="operationService"/>
+            id="operationService" version="1.0"/>
     <dubbo:reference
             interface="org.zjw.blog.service.RoleService"
-            id="roleService"/>
+            id="roleService" version="1.0"/>
 
     <dubbo:reference
             interface="org.zjw.blog.service.DownloadService"
-            id="downloadService"/>
+            id="downloadService" version="1.0"/>
 </beans>

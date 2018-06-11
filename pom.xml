@@ -14,7 +14,7 @@
         <module>blog-controller</module>
     </modules>
     <groupId>zhoujiawei-blog</groupId>
-    <artifactId>Blog</artifactId>
+    <artifactId>blog_dubbo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
@@ -242,9 +242,9 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <version>4.12</version>
             <!-- 表示开发的时候引入，发布的时候不会加载此包 -->
-            <!-- <scope>test</scope> -->
+             <scope>test</scope>
         </dependency>
 
 
