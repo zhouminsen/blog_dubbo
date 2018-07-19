@@ -5,6 +5,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Backup implements Serializable {
+
+
     private Integer id;
 
     private String backupName;

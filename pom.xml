@@ -304,6 +304,11 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.6</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.16</version>
+        </dependency>
     </dependencies>
     <build>
         <!--将.xml的文件全部以配置文件的方式设置.因为mapper放在dao层里,防止mapper.xml没打井war包中-->

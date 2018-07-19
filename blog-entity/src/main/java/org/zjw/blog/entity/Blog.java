@@ -1,5 +1,7 @@
 package org.zjw.blog.entity;
 
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,6 +12,7 @@ import java.util.List;
  * @author 周家伟
  * @date 2016-7-16
  */
+@Data
 public class Blog implements Serializable {
     private Integer id;
 
