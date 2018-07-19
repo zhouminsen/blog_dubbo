@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml  encoding="UTF-8"?>
 <!-- 添加 DUBBO SCHEMA -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
@@ -39,42 +39,42 @@
     <!-- 声明需要暴露的服务接口 -->
     <dubbo:service
             interface="org.zjw.blog.service.BackupService"
-            ref="backupService" version="1.0"/>
+            ref="backupService" />
     <dubbo:service
             interface="org.zjw.blog.service.BlogCommentService"
-            ref="blogCommentService" version="1.0"/>
+            ref="blogCommentService" />
     <dubbo:service
             interface="org.zjw.blog.service.BloggerService"
-            ref="bloggerService" version="1.0"/>
+            ref="bloggerService" />
     <dubbo:service
             interface="org.zjw.blog.service.BlogService"
-            ref="blogService" version="1.0"/>
+            ref="blogService" />
     <dubbo:service
             interface="org.zjw.blog.service.BlogTypeService"
-            ref="blogTypeService" version="1.0"/>
+            ref="blogTypeService" />
     <dubbo:service
             interface="org.zjw.blog.service.LinkService"
-            ref="linkService" version="1.0"/>
+            ref="linkService" />
     <dubbo:service
             interface="org.zjw.blog.service.LogErrorService"
-            ref="logErrorService" version="1.0"/>
+            ref="logErrorService" />
     <dubbo:service
             interface="org.zjw.blog.service.LogLoginService"
-            ref="logLoginService" version="1.0"/>
+            ref="logLoginService" />
     <dubbo:service
             interface="org.zjw.blog.service.LogOperationService"
-            ref="logOperationService" version="1.0"/>
+            ref="logOperationService" />
     <dubbo:service
             interface="org.zjw.blog.service.MenuService"
-            ref="menuService" version="1.0"/>
+            ref="menuService" />
     <dubbo:service
             interface="org.zjw.blog.service.OperationService"
-            ref="operationService" version="1.0"/>
+            ref="operationService" />
     <dubbo:service
             interface="org.zjw.blog.service.RoleService"
-            ref="roleService" version="1.0"/>
+            ref="roleService" />
 
     <dubbo:service
             interface="org.zjw.blog.service.DownloadService"
-            ref="downloadService" version="1.0"/>
+            ref="downloadService" />
 </beans>
