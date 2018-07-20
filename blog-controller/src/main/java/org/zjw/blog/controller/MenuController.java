@@ -31,7 +31,7 @@ public class MenuController extends BaseController {
 	private RoleService roleService;
 	
 	
-	@RequestMapping("index")
+	@RequestMapping("/index")
 	public String index() {
 		return "admin/permission/menu"; 
 	}
@@ -41,7 +41,7 @@ public class MenuController extends BaseController {
 	 * @param parentId
 	 * @return
 	 */
-	@RequestMapping("list")
+	@RequestMapping("/list")
 	public void list(Integer parentId,HttpServletRequest request,HttpServletResponse response) {
 		Map<String, Object> queryMap = new HashMap<String, Object>();
 		queryMap.put("parentId", parentId);
@@ -56,7 +56,7 @@ public class MenuController extends BaseController {
 	 * @param menu
 	 * @param response
 	 */
-	@RequestMapping("save")
+	@RequestMapping("/save")
 	public void save(Menu menu, HttpServletResponse response) {
 		menu.setCreateDate(new Date());
 		int line=menuService.save(menu);
@@ -75,7 +75,7 @@ public class MenuController extends BaseController {
 	 * @param menu
 	 * @param response
 	 */
-	@RequestMapping("modify")
+	@RequestMapping("/modify")
 	public void modify(Menu menu,HttpServletResponse response) {
 		int line=menuService.modify(menu);
 		JSONObject jsonObject=new JSONObject();
@@ -94,7 +94,7 @@ public class MenuController extends BaseController {
 	 * @param menuId
 	 * @param parentId
 	 */
-	@RequestMapping("delete")
+	@RequestMapping("/delete")
 	public void delete(HttpServletResponse response,Integer menuId,Integer parentId) {
 		int line=menuService.delete(menuId,parentId);
 		JSONObject jsonObject=new JSONObject();
@@ -113,7 +113,7 @@ public class MenuController extends BaseController {
 	 * @param session
 	 * @throws Exception
 	 */
-	@RequestMapping("getMenuTree")
+	@RequestMapping("/getMenuTree")
 	public void getMenuTree(HttpServletResponse response,HttpSession session) throws Exception {
 		System.out.println("我进来了加载树形菜单啦-----------");
 		AuthUser authUser = (AuthUser) SecurityUtils.getSubject().getPrincipal();
@@ -133,7 +133,7 @@ public class MenuController extends BaseController {
 	 * @param roleId
 	 * @throws Exception
 	 */
-	@RequestMapping("chooseMenu")
+	@RequestMapping("/chooseMenu")
 	public void chooseMenu(HttpServletResponse response,Integer parentId,Integer roleId) throws Exception {
 		Map<String, Object> queryMap = new HashMap<String, Object>();
 		queryMap.put("parentId", parentId);

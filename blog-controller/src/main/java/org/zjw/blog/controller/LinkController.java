@@ -22,7 +22,7 @@ public class LinkController extends BaseController {
 	@Resource
 	private LinkService linkService;
 
-	@RequestMapping("index")
+	@RequestMapping("/index")
 	public String index() {
 		return "admin/blog/linkManage";
 	}
@@ -33,7 +33,7 @@ public class LinkController extends BaseController {
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping(value = "list", produces = "text/html;charset=UTF-8")
+	@RequestMapping(value = "/list", produces = "text/html;charset=UTF-8")
 	@ResponseBody
 	public String list(HttpServletRequest request){
 		Map<String, Object> resultMap = new HashMap<>();
@@ -50,7 +50,7 @@ public class LinkController extends BaseController {
 		return JSON.toJSONString(resultMap);
 	}
 
-	@RequestMapping("save")
+	@RequestMapping("/save")
 	public void save(Link link, HttpServletResponse response) {
 		Map<String, Object> resultMap = new HashMap<>();
 		try {
@@ -62,7 +62,7 @@ public class LinkController extends BaseController {
 		WebUtil.write(response, resultMap);
 	}
 
-	@RequestMapping("modify")
+	@RequestMapping("/modify")
 	public void modify(Link link, HttpServletResponse response) {
 		Map<String, Object> resultMap = new HashMap<>();
 		try {
@@ -78,7 +78,7 @@ public class LinkController extends BaseController {
 		WebUtil.write(response, resultMap);
 	}
 
-	@RequestMapping("delete")
+	@RequestMapping("/delete")
 	@ResponseBody
 	public String delete(String ids) {
 		String[] arrayId = ids.split(",");

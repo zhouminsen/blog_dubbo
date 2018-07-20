@@ -53,10 +53,10 @@ public interface RoleService {
 	
 	/**
 	 * 修改角色菜单
-	 * @param role
+	 * @param
 	 * @return
 	 */
-	int modifyRoleMenu(Role role);
+	int modifyRoleMenu(String menuIds, Integer roleId);
 	
 	/**
 	 * 逻辑批删除
@@ -64,4 +64,5 @@ public interface RoleService {
 	 * @return
 	 */
 	int deleteLogicBatch(String[] idArray);
+
 }

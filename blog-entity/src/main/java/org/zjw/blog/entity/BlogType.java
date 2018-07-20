@@ -10,6 +10,9 @@ import java.util.Date;
  * @date 2016-7-16
  */
 public class BlogType implements Serializable {
+
+
+	private static final long serialVersionUID = -7947434476394995386L;
 	private Integer id;
 
 	private String typeName;

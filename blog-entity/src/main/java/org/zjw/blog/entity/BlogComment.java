@@ -9,6 +9,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class BlogComment implements Serializable {
+
+    private static final long serialVersionUID = 6529571618831233051L;
     private Integer id;
 
     private String userIp;

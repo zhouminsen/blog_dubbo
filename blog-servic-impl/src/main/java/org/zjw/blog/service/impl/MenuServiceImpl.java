@@ -114,7 +114,7 @@ public class MenuServiceImpl implements MenuService {
     public String getTreeToModify(Map<String, Object> queryMap) {
         JSONArray jsonArray = new JSONArray();
         jsonArray = createTree(queryMap);
-        return jsonArray.toString();
+        return jsonArray.toJSONString();
     }
 
     private JSONArray createTree(Map<String, Object> queryMap) {
@@ -155,9 +155,9 @@ public class MenuServiceImpl implements MenuService {
             List<Operation> operationList = operationService.getByMenuId(menu.getMenuId());
             if (!operationList.isEmpty()) {
                 JSONArray childrenArray = new JSONArray();
-                JSONObject children = new JSONObject();
                 jsonObject.put("state", "closed");
                 for (Operation operation : operationList) {
+                    JSONObject children = new JSONObject();
                     children.put("id", operation.getOperationId());
                     String operationStr = operation.getMenuName() + ":" + operation.getOperationName();
                     children.put("text", operationStr);

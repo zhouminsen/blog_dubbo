@@ -21,6 +21,8 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
     </context:component-scan>
 
+    <mvc:resources location="/static" mapping="/**"/>
+
     <!-- 启动SpringMVC的注解功能，完成请求和注解POJO的映射 -->
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
     </bean>

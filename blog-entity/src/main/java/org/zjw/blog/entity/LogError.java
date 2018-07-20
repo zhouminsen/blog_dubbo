@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class LogError implements Serializable {
+
+
+    private static final long serialVersionUID = -6223228873483573723L;
     private Integer id;
 
     private String ipAddress;

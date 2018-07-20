@@ -55,13 +55,13 @@
             interface="org.zjw.blog.service.LogOperationService"
             id="logOperationService" />
     <dubbo:reference
-            interface="org.zjw.blog.service.MenuService"
+            interface="org.zjw.blog.service.MenuService" retries="0"
             id="menuService" />
     <dubbo:reference
             interface="org.zjw.blog.service.OperationService"
             id="operationService" />
     <dubbo:reference
-            interface="org.zjw.blog.service.RoleService"
+            interface="org.zjw.blog.service.RoleService" retries="0"
             id="roleService" />
 
     <dubbo:reference

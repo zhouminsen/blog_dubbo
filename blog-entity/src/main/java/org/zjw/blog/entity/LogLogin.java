@@ -5,6 +5,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class LogLogin implements Serializable {
+
+    private static final long serialVersionUID = 8121983725196276787L;
     private Integer id;
 
     private String username;

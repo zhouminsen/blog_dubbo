@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class LogOperation implements Serializable {
+
+
+    private static final long serialVersionUID = -4742415956288109271L;
+
     private Integer id;
 
     /**
